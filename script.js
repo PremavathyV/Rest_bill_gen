@@ -1,3 +1,4 @@
+console.log("Script Loaded");
 const menu = [
     { name: "Pizza", price: 250 },
     { name: "Burger", price: 120 },
