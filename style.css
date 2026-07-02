@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f0f7ff 0%, #eef9f1 100%);
+    color: #213547;
+}
+
+.container {
+    width: min(760px, calc(100% - 32px));
+    background: rgba(255, 255, 255, 0.96);
+    padding: 30px;
+    border-radius: 28px;
+    box-shadow: 0 20px 60px rgba(14, 67, 122, 0.12);
+    border: 1px solid rgba(38, 104, 204, 0.09);
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.eyebrow {
+    color: #5a7d9a;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+}
+
+h1 {
+    font-size: clamp(2rem, 2.5vw, 2.6rem);
+    line-height: 1.05;
+}
+
+.subtitle {
+    color: #4a6b82;
+    font-size: 1rem;
+    max-width: 560px;
+    line-height: 1.6;
+}
+
+.table-wrap {
+    overflow-x: auto;
+    margin-bottom: 22px;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+table th,
+table td {
+    padding: 16px 14px;
+    text-align: left;
+    background: white;
+    border: 1px solid #e3eaf2;
+}
+
+table th {
+    color: #34495e;
+    font-weight: 700;
+    background: linear-gradient(90deg, rgba(236,243,255,1) 0%, rgba(245,249,253,1) 100%);
+}
+
+table tbody tr {
+    border-radius: 18px;
+}
+
+input[type='number'] {
+    width: 80px;
+    padding: 10px 12px;
+    border-radius: 14px;
+    border: 1px solid #d3dce8;
+    background: #fbfdff;
+    text-align: center;
+    font-weight: 600;
+    color: #1f3344;
+}
+
+button {
+    width: 100%;
+    padding: 14px 22px;
+    border: none;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #4f9dff 0%, #2063d7 100%);
+    color: white;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 18px 30px rgba(35, 101, 200, 0.2);
+}
+
+.bill-card {
+    margin-top: 24px;
+    background: #f7fbff;
+    padding: 24px;
+    border-radius: 22px;
+    border: 1px solid #dbe8f8;
+    min-height: 180px;
+}
+
+.empty-state {
+    color: #5b7d99;
+}
+
+#bill h2 {
+    margin-bottom: 14px;
+    font-size: 1.4rem;
+}
+
+#bill p {
+    margin: 10px 0;
+    line-height: 1.7;
+}
+
+#bill hr {
+    border: none;
+    border-top: 1px solid #d9e3f1;
+    margin: 18px 0;
+}
+
+#bill strong {
+    color: #203b5b;
+}
+
+#bill h3 {
+    margin-top: 16px;
+    font-size: 1.4rem;
+    color: #1555a1;
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 22px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    table th,
+    table td {
+        padding: 14px 10px;
+        font-size: 0.95rem;
+    }
+
+    input[type='number'] {
+        width: 70px;
+    }
+}
