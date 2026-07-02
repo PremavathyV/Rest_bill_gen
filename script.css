@@ -56,11 +56,11 @@ function generateBill() {
     document.getElementById("bill").innerHTML = billHTML;
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    renderMenu();
+renderMenu();
 
-    const generateButton = document.getElementById("generateBtn");
-    if (generateButton) {
-        generateButton.addEventListener("click", generateBill);
-    }
-});
+const generateButton = document.getElementById("generateBtn");
+if (generateButton) {
+    generateButton.addEventListener("click", generateBill);
+}
+
+console.log("Menu rendered and button listener attached.");
