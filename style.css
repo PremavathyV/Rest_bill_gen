@@ -38,27 +38,22 @@ body {
 }
 
 h1 {
-    display: flex;
-    align-items: center;
-    gap: 14px;
+    position: relative;
+    padding-left: 1.3rem;
     font-size: clamp(2rem, 2.5vw, 2.6rem);
     line-height: 1.05;
 }
 
-.icon {
-    display: inline-flex;
-    width: 42px;
-    height: 42px;
-    min-width: 42px;
-    border-radius: 14px;
-    background: #e6f0ff;
-    align-items: center;
-    justify-content: center;
-}
-
-.icon svg {
-    width: 22px;
-    height: 22px;
+h1::before {
+    content: '';
+    position: absolute;
+    top: 0.45rem;
+    left: 0;
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4f9dff 0%, #2063d7 100%);
+    box-shadow: 0 8px 16px rgba(79, 157, 255, 0.22);
 }
 
 .subtitle {
