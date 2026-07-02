@@ -6,20 +6,21 @@ const menu = [
     { name: "Soft Drink", price: 60 }
 ];
 
-const menuBody = document.getElementById("menuBody");
+function renderMenu() {
+    const menuBody = document.getElementById("menuBody");
+    if (!menuBody) return;
 
-// Display Menu
-menu.forEach((item, index) => {
-    menuBody.innerHTML += `
-    <tr>
-        <td>${item.name}</td>
-        <td>${item.price}</td>
-        <td>
-            <input type="number" id="qty${index}" min="0" value="0">
-        </td>
-    </tr>
-    `;
-});
+    menuBody.innerHTML = menu
+        .map((item, index) => `
+            <tr>
+                <td>${item.name}</td>
+                <td>${item.price}</td>
+                <td>
+                    <input type="number" id="qty${index}" min="0" value="0">
+                </td>
+            </tr>`)
+        .join("");
+}
 
 function generateBill() {
 
@@ -28,10 +29,10 @@ function generateBill() {
 
     menu.forEach((item, index) => {
 
-        let qty = Number(document.getElementById(`qty${index}`).value);
+        let qtyInput = document.getElementById(`qty${index}`);
+        let qty = qtyInput ? Number(qtyInput.value) : 0;
 
-        if(qty > 0){
-
+        if (qty > 0) {
             let amount = qty * item.price;
             subtotal += amount;
 
@@ -54,3 +55,12 @@ function generateBill() {
 
     document.getElementById("bill").innerHTML = billHTML;
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    renderMenu();
+
+    const generateButton = document.getElementById("generateBtn");
+    if (generateButton) {
+        generateButton.addEventListener("click", generateBill);
+    }
+});
