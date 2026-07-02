@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Bill Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header class="hero">
+        <div>
+            <p class="eyebrow">Quick order summary</p>
+            <h1>🍽 Restaurant Bill Generator</h1>
+            <p class="subtitle">Choose quantities and generate your bill instantly with GST included.</p>
+        </div>
+    </header>
+
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price (₹)</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody id="menuBody"></tbody>
+        </table>
+    </div>
+
+    <button onclick="generateBill()">Generate Bill</button>
+
+    <section id="bill" class="bill-card">
+        <div class="empty-state">
+            <h2>Bill Summary</h2>
+            <p>Select your items above and click the button to view the total.</p>
+        </div>
+    </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
